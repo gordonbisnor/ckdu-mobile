@@ -1,3 +1,26 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="container">
+<img src="ckdu-color.svg" class="logo"/>
+<ul>
+	{{#each model as |stream|}}
+		{{#if (eq playing.url stream.url)}}
+			<li class="active" {{action 'stop'}}>
+				{{icon-stop tagName="span" classNames="icon"}}
+				{{stream.name}}
+			</li>
+		{{else}}
+			<li {{action 'play' stream}}>
+				{{icon-play tagName="span" classNames="icon"}}
+				{{stream.name}}
+			</li>
+		{{/if}}
+	{{/each}}
+	{{#if playing}}
+		<li class="stop">
+			<a {{action 'stop'}}>
+			{{icon-stop tagName="span" classNames="icon"}}
+			Listening to {{playing.name}}
+			</a>
+		</li>
+  {{/if}}
+</ul>
+</div>
