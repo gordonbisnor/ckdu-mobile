@@ -35,9 +35,9 @@ body {
 	}
 }
 img.logo {
-	max-width: 280px;
+	max-width: 240px;
 	margin: auto;
-	margin-top: 2em;
+	margin-top: 2.5em;
 	margin-bottom: 2em;
 	display: block;
 	@include noSelectOrDrag();
@@ -51,6 +51,7 @@ ul {
 	li {
 		background-color: white;
 		padding: 1em;
+		touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;
 		&.active {
 			background-color: $blue!important;
 			color: white;
