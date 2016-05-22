@@ -1,4 +1,4 @@
-![alt CKDU 88.1FM](public/ckdu.png)
+![alt CKDU 88.1FM](ckdu.png)
 
 # CKDU 88.1 FM desktop streaming application
 
